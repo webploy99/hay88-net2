@@ -75,46 +75,9 @@
         </div>
     </header>
 
+    <!-- main -->
     <div class="main mt-28 p-4">
         <div class="">
-            <div class="overflow-hidden max-w-7xl mx-auto">
-                <div class="marquee py-3 inline-flex space-x-4 max-w-full items-center *:bg-gradient-to-b *:from-indigo-600 *:via-yellow-600 *:to-pink-600 *:cursor-pointer z-10 " x-data="Marquee({speed: 1, spaceX: 4, dynamicWidthElements: true})">
-                  
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon1.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Ganesha Vàng</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon2.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Thần Tài</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon3.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Long Thần</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon4.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Oẳn Tù Tỳ</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon5.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Bầu Cua</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon6.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Xèng Hoa Quả</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon7.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Bắn Cá</span>
-                    </div>
-                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden">
-                        <img src="./images/icon8.png" class="transition duration-500 hover:scale-110 ease-in-out p-3">
-                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg-[#3e87c7]">Trên Dưới</span>
-                    </div>
-                </div>
-            </div>
-
             <div class="mt-10">
                 <div class="grid md:grid-cols-3 gap-8 md:gap-0 place-items-center text-lg text-[#6d839f] font-semibold">
                     <div class="">
@@ -132,6 +95,53 @@
             <div class="mt-10">
                 <div class="flex justify-center items-center text-lg text-[#b20000] font-semibold">
                     <button onclick="url()" class="border-2 border-[#b20000] rounded-xl px-10 py-2.5 hover:bg-[#b20000] hover:text-white duration-300 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 shadow-xl shadow-gray-600/50">ĐĂNG KÝ NHẬN CODE</button>
+                </div>
+            </div>
+
+            <!-- maquee slider -->
+            <div class="overflow-hidden max-w-7xl mx-auto mt-10">
+                <div class="marquee py-3 inline-flex space-x-4 max-w-full items-center *:cursor-pointer z-10 " x-data="Marquee({speed: 1, spaceX: 4, dynamicWidthElements: true})">
+                  
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon1.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border-t border-yellow-400 bg- shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Ganesha Vàng</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon2.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Thần Tài</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon3.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Long Thần</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon4.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Oẳn Tù Tỳ</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon5.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Bầu Cua</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon6.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Xèng Hoa Quả</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon7.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Bắn Cá</span>
+                    </div>
+                    <div onclick="url()" class="flex flex-col shrink-0 overflow-hidden relative" style="background-image: url(./images/page-bg-blue.jpg)">
+                        <img src="./images/icon8.png" class="transition duration-500 hover:scale-110 ease-in-out p-3 z-10">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-blue-500 via-yellow-500 to-pink-500 opacity-60"></div>
+                        <span class="block text-center text-md sm:text-lg font-semibold text-yellow-300 mt-3 py-1.5 border border-yellow-500 shadow z-10 bg-gradient-to-b from-indigo-400 to-pink-400">Trên Dưới</span>
+                    </div>
                 </div>
             </div>
 

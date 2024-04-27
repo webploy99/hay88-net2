@@ -1,9 +1,9 @@
 // Show and hide menu
-function OpenNav(){
-    document.getElementById("Nav").style.width = "100%";
-    }
-    function CloseNav(){
-    document.getElementById("Nav").style.width = "0%";
+    function OpenNav(){
+        document.getElementById("Nav").style.width = "100%";
+        }
+        function CloseNav(){
+        document.getElementById("Nav").style.width = "0%";
     }
 
     // url
@@ -37,23 +37,23 @@ function OpenNav(){
 
     // ===============maquee slider=====================
     const debounce = (func, wait, immediate = true) => {
-        let timeout
-        return () => {
-            const context = this
-            const args = arguments
-            const callNow = immediate && !timeout
-            clearTimeout(timeout)
-            timeout = setTimeout(function () {
-            timeout = null
-            if (!immediate) {
-                func.apply(context, args)
-            }
-            }, wait)
-            if (callNow) func.apply(context, args)
+    let timeout
+    return () => {
+        const context = this
+        const args = arguments
+        const callNow = immediate && !timeout
+        clearTimeout(timeout)
+        timeout = setTimeout(function () {
+        timeout = null
+        if (!immediate) {
+            func.apply(context, args)
         }
-        }
+        }, wait)
+        if (callNow) func.apply(context, args)
+    }
+    }
 
-        const appendChildAwaitLayout = (parent, element) => {
+    const appendChildAwaitLayout = (parent, element) => {
         return new Promise((resolve, _) => {
             const resizeObserver = new ResizeObserver((entries, observer) => {
             observer.disconnect()
@@ -62,9 +62,9 @@ function OpenNav(){
             resizeObserver.observe(element)
             parent.appendChild(element)
         })
-        }
+    }
 
-        document.addEventListener('alpine:init', () => {
+    document.addEventListener('alpine:init', () => {
         Alpine.data(
             'Marquee',
             ({ speed = 1, spaceX = 0, dynamicWidthElements = false }) => ({
@@ -133,6 +133,6 @@ function OpenNav(){
             },
             })
         )
-        })
+    })
 
-        Alpine.start()
+    Alpine.start()

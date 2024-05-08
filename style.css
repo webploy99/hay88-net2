@@ -39,8 +39,7 @@ body {
 
 }
 
-
-
+/* maquee slider */
 .marquee {
     animation: scrolling var(--marquee-time) linear infinite;
   }

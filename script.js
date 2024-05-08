@@ -1,9 +1,9 @@
 // Show and hide menu
-    function OpenNav(){
-        document.getElementById("Nav").style.width = "100%";
-        }
-        function CloseNav(){
-        document.getElementById("Nav").style.width = "0%";
+function OpenNav(){
+    document.getElementById("Nav").style.width = "100%";
+    }
+    function CloseNav(){
+    document.getElementById("Nav").style.width = "0%";
     }
 
     // url
@@ -13,47 +13,44 @@
     }
 
     // ==========================================
-    // Get the button
-    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
 
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
+        function scrollFunction() {
+            if (document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-128px";
+            }
+        }
 
     // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    function topScroll() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
 
 
     // ===============maquee slider=====================
+    
     const debounce = (func, wait, immediate = true) => {
-    let timeout
-    return () => {
-        const context = this
-        const args = arguments
-        const callNow = immediate && !timeout
-        clearTimeout(timeout)
-        timeout = setTimeout(function () {
-        timeout = null
-        if (!immediate) {
-            func.apply(context, args)
+        let timeout
+        return () => {
+            const context = this
+            const args = arguments
+            const callNow = immediate && !timeout
+            clearTimeout(timeout)
+            timeout = setTimeout(function () {
+            timeout = null
+            if (!immediate) {
+                func.apply(context, args)
+            }
+            }, wait)
+            if (callNow) func.apply(context, args)
         }
-        }, wait)
-        if (callNow) func.apply(context, args)
-    }
-    }
+        }
 
-    const appendChildAwaitLayout = (parent, element) => {
+        const appendChildAwaitLayout = (parent, element) => {
         return new Promise((resolve, _) => {
             const resizeObserver = new ResizeObserver((entries, observer) => {
             observer.disconnect()
@@ -62,9 +59,9 @@
             resizeObserver.observe(element)
             parent.appendChild(element)
         })
-    }
+        }
 
-    document.addEventListener('alpine:init', () => {
+        document.addEventListener('alpine:init', () => {
         Alpine.data(
             'Marquee',
             ({ speed = 1, spaceX = 0, dynamicWidthElements = false }) => ({
